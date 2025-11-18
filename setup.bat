@@ -97,9 +97,8 @@ echo Setup Complete!
 echo ========================================
 echo.
 echo To start the application:
-echo   Backend:  cd Backend  ^&^& dotnet run
+echo   Backend:  cd Backend ^&^& dotnet run
 echo   Frontend: cd Frontend ^&^& npm run dev
 echo.
-echo Or run start.bat to start both servers
 echo ========================================
 pause
