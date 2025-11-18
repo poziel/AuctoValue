@@ -1,6 +1,7 @@
 ﻿using AuctoValue.Backend.Models;
 using AuctoValue.Backend.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace AuctoValue.Backend.Controllers;
 
@@ -18,9 +19,12 @@ public class AuctionController(IAuctionCalculatorService calculatorService, ILog
     /// <returns>Complete fee breakdown</returns>
     /// <response code="200">Returns the calculated fee breakdown</response>
     /// <response code="400">If the request is invalid</response>
+    /// <response code="429">If rate limit is exceeded</response>
     [HttpPost("calculate")]
+    [EnableRateLimiting("fixed")]
     [ProducesResponseType(typeof(FeeBreakdown), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
     public ActionResult<FeeBreakdown> Calculate([FromBody] CalculateRequest request)
     {
         try
