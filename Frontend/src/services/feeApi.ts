@@ -1,7 +1,7 @@
 ﻿import type { CalculateRequest } from '@/models/CalculateRequest'
 import type { FeeBreakdown } from '@/models/FeeBreakdown'
 
-const API_BASE_URL = import.meta.env.CSHARP_API_BASE_URL as string | undefined
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL as string | undefined
 
 /**
  * Get the base URL for the API from environment variables.
@@ -11,7 +11,7 @@ const API_BASE_URL = import.meta.env.CSHARP_API_BASE_URL as string | undefined
  */
 function getApiBaseUrl(): string {
   if (!API_BASE_URL) {
-    throw new Error('CSHARP_API_BASE_URL is not defined in your environment.')
+    throw new Error('VITE_API_BASE_URL is not defined in your environment.')
   }
   return API_BASE_URL.replace(/\/+$/, '') // trim trailing slash
 }
