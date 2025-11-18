@@ -6,6 +6,11 @@
     }
   },
   "AllowedHosts": "*",
+  "CorsOrigins": [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175"
+  ],
   "Fees": {
     "StorageFee": 100,
     "BaseFeePercentage": 0.10,
