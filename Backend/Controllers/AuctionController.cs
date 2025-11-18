@@ -1,5 +1,4 @@
-﻿using AuctoValue.Backend.DTOs;
-using AuctoValue.Backend.Models;
+﻿using AuctoValue.Backend.Models;
 using AuctoValue.Backend.Services;
 using Microsoft.AspNetCore.Mvc;
 

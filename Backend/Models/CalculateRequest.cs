@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using AuctoValue.Backend.Models;
 
-namespace AuctoValue.Backend.DTOs;
+namespace AuctoValue.Backend.Models;
 
 /// <summary>
 /// Request DTO for calculating auction fees.
